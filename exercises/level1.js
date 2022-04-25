@@ -23,7 +23,7 @@ const user = {
  * @returns {string}
  */
 function level1exercise1(user) {
-  
+  return user.password
 }
 
 /**
@@ -33,7 +33,7 @@ function level1exercise1(user) {
  * @returns {string}
  */
 function level1exercise2(user) {
-
+  return user.first + ' ' + user.last
 }
 
 /**
@@ -43,9 +43,8 @@ function level1exercise2(user) {
  * @returns {string}
  */
 function level1exercise3(user) {
-  
+  return `Hello, ${user.first} ${user.last}!`
 }
-
 /**
  * Calculating data from properties:
  * use the object data to calculate the user's age and return it
@@ -53,7 +52,8 @@ function level1exercise3(user) {
  * @returns {number}
  */
 function level1exercise4(user) {
-
+  const currentAge = 2022 - user.birthYear
+  return currentAge
 }
 
 /**
@@ -63,7 +63,7 @@ function level1exercise4(user) {
  * @returns {string}
  */
 function level1exercise5(user) {
-
+  return `${user.first.toUpperCase(user.first)} ${user.last.toUpperCase(user.last)}`
 }
 
 /**
@@ -73,5 +73,6 @@ function level1exercise5(user) {
  * @returns {string}
  */
 function level1exercise6(user) {
-
+  return `${user.first[0]}${user.last[0]}`
 }
+
