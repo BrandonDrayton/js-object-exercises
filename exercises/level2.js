@@ -35,7 +35,7 @@ const user2 = {
  * @returns {string}
  */
 function level2exercise1(user) {
-
+  return user.security.password
 }
 
 /**
@@ -45,9 +45,8 @@ function level2exercise1(user) {
  * @returns {string}
  */
 function level2exercise2(user) {
-
+  return `${user.name.first} ${user.name.last}`
 }
-
 /**
  * Combining with Nested Object Properties (part 2):
  * Use the object data to return the user's initials
@@ -55,7 +54,7 @@ function level2exercise2(user) {
  * @returns {string}
  */
 function level2exercise3(user) {
-
+  return `${user.name.first[0]}${user.name.last[0]}`
 }
 
 /**
@@ -65,8 +64,11 @@ function level2exercise3(user) {
  * @returns {boolean}
  */
 function level2exercise4(user) {
-
+  if (user.security.password.length >= 8) {
+    return true
+  } else return false
 }
+
 
 /**
  * Validating properties (part 2):
@@ -75,5 +77,13 @@ function level2exercise4(user) {
  * @returns {boolean}
  */
 function level2exercise5(user) {
+  const userTimeStamp = user.security.lastLogin.getTime()
+  const timestamp = (30 * 24 * 60 * 60 * 1000)
+  const todaysDate = new Date().getTime()
+  const timestampThirtyDaysAgo = todaysDate - timestamp
+  if (timestampThirtyDaysAgo < userTimeStamp) {
+    return true
+  } else return false
 
 }
+
